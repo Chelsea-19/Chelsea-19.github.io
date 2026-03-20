@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Felix Liang | Academic & Career Portfolio</title>
+  <meta
+    name="description"
+    content="Felix Liang's academic and career portfolio in biomedical AI, genomics, medical agent systems, and research-to-product workflows."
+  />
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-2: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe2ea;
+      --accent: #0f4c81;
+      --accent-2: #123a63;
+      --soft: #eaf2fb;
+      --shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+      --radius: 20px;
+      --maxw: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.72;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--maxw), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(245, 247, 251, 0.9);
+      border-bottom: 1px solid rgba(219, 226, 234, 0.9);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 74px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 18px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      padding: 84px 0 40px;
+      display: grid;
+      grid-template-columns: 1.45fr 0.95fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-left,
+    .hero-right,
+    .card,
+    .project-card,
+    .pub-card,
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-left { padding: 34px; }
+    .hero-right {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: 0.84rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-summary {
+      font-size: 1.06rem;
+      color: var(--muted);
+      margin: 0 0 14px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0 26px;
+    }
+
+    .badge {
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #f1f5f9;
+      color: #1e293b;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border: 1px solid #e2e8f0;
+    }
+
+    .action-row,
+    .lang-links,
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn,
+    .mini-btn,
+    .lang-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover,
+    .mini-btn:hover,
+    .lang-pill:hover {
+      transform: translateY(-1px);
+      border-color: #bfd1e3;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      background: var(--accent-2);
+      border-color: var(--accent-2);
+    }
+
+    .lang-pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: 0.88rem;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .info-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    .info-item span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    section { padding: 18px 0 4px; }
+
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .grid-2,
+    .projects,
+    .contact-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .contact-grid { grid-template-columns: 1.1fr 0.9fr; }
+
+    .card,
+    .project-card,
+    .pub-card,
+    .contact-card,
+    .timeline-item {
+      padding: 24px;
+    }
+
+    .card h3,
+    .project-card h3,
+    .pub-card h3,
+    .contact-card h3,
+    .timeline-item h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.18rem;
+    }
+
+    .card p,
+    .project-card p,
+    .pub-card p,
+    .contact-card p,
+    .timeline-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 14px 0 0;
+      color: var(--muted);
+    }
+
+    li + li { margin-top: 8px; }
+
+    .experience-wrap,
+    .pub-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .mini-btn {
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: var(--surface-2);
+      font-size: 0.88rem;
+      color: var(--accent);
+    }
+
+    footer {
+      padding: 42px 0 68px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-line {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .grid-2,
+      .projects,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(var(--maxw), calc(100% - 24px));
+      }
+
+      .hero-left,
+      .hero-right,
+      .card,
+      .project-card,
+      .pub-card,
+      .contact-card,
+      .timeline-item {
+        padding: 20px;
+      }
+
+      h2 { font-size: 1.68rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Felix Liang / 梁敬林</div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="top">
+      <div class="hero-left">
+        <span class="eyebrow">Academic + Career Portfolio</span>
+        <h1>Building biomedical AI systems from research to real-world workflows.</h1>
+        <p class="hero-summary">
+          I am Felix Liang, an MSc student in Biomedical Data Science (AI) at Nanyang Technological University. My work sits at the intersection of genomic foundation models, medical AI agents, clinical decision workflows, and AI productization.
+        </p>
+        <p class="hero-summary">
+          I am particularly interested in research-to-product pathways: turning frontier models into verifiable, deployable, and workflow-compatible systems for biomedicine, healthcare, and life sciences.
+        </p>
+
+        <div class="badge-row">
+          <span class="badge">Genomic Foundation Models</span>
+          <span class="badge">Medical AI Agents</span>
+          <span class="badge">RAG & Verification</span>
+          <span class="badge">Research-to-Product</span>
+        </div>
+
+        <div class="action-row">
+          <a class="btn primary" href="#projects">Selected Projects</a>
+          <a class="btn" href="./assets/cv/Felix_Liang_CV_EN.pdf" download>Download CV (EN)</a>
+          <a class="btn" href="./assets/cv/Felix_Liang_CV_CN.pdf" download>下载简历（中文）</a>
+        </div>
+      </div>
+
+      <aside class="hero-right" aria-label="Quick profile">
+        <div>
+          <div class="lang-links">
+            <a class="lang-pill" href="./index.html">English</a>
+            <a class="lang-pill" href="./zh/index.html">中文</a>
+          </div>
+          <h3>Current Focus</h3>
+          <div class="info-list">
+            <div class="info-item">
+              <strong>Research</strong>
+              <span>Genomic language models, medical AI systems, agent workflows, and interpretable biomedical ML.</span>
+            </div>
+            <div class="info-item">
+              <strong>Career Interests</strong>
+              <span>Biomedical AI, healthcare AI product, research engineering, and agent system design.</span>
+            </div>
+            <div class="info-item">
+              <strong>Location</strong>
+              <span>Singapore · Open to internships, collaborations, and full-time opportunities.</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>
+          My background combines academic research, biomedical data science, and AI product practice. Beyond model performance, I care about how models enter real workflows: how they connect with data structures, decision rules, governance constraints, user interaction, and verifiable outputs.
+        </p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Academic Profile</h3>
+          <p>
+            My recent work focuses on AI for genomics, medical AI, foundation models, and agentic systems. I am especially interested in how sequence modeling, retrieval, structured state transitions, and evidence grounding can be integrated into biomedical decision support.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Professional Profile</h3>
+          <p>
+            On the applied side, I have worked across clinical research AI, internal knowledge agents, AI training products, model governance, synthetic tabular data, and growth analytics. These experiences shaped my interest in translating research ideas into reliable products and usable systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-head">
+        <h2>Selected Projects</h2>
+        <p>
+          Representative work across genomic modeling, medical agent systems, and applied AI workflows. Each project reflects a shared theme: turning advanced models into structured, trustworthy, and decision-oriented systems.
+        </p>
+      </div>
+
+      <div class="projects">
+        <article class="project-card">
+          <div class="meta">NTU Research Project · Genomics · Foundation Models</div>
+          <h3>Evo 2 Genomic Language Model</h3>
+          <p>
+            Designed and implemented a multi-scale perplexity analysis framework for <em>Acinetobacter baumannii</em>, spanning replicon-level, fixed-window, and gene-centric dynamic-window analysis to identify regions deviating from species-level statistical grammar.
+          </p>
+          <ul>
+            <li>Built the experimental pipeline from hypothesis framing to interpretation and visualization</li>
+            <li>Developed scripts for long-sequence inference, perplexity analysis, and embedding extraction under HPC constraints</li>
+            <li>Extended the research direction toward a lab-embedded Genomic Agent architecture with distillation and retrieval grounding</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="meta">Parexel · Clinical AI · RWD/RWE Workflow</div>
+          <h3>Patient Recruitment Agent (PRA)</h3>
+          <p>
+            Contributed to workflow abstraction and task decomposition for an AI-assisted patient recruitment system in clinical research, with emphasis on eligibility logic, structured extraction, and deployment realism in CRO settings.
+          </p>
+          <ul>
+            <li>Mapped clinical text into structured eligibility conditions and downstream storage logic</li>
+            <li>Examined how agent systems fit regulatory, operational, and business constraints</li>
+            <li>Built a practical understanding of AI adoption across APAC pharmaceutical and clinical research workflows</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="meta">NTU Research Internship · Medical Education Agent</div>
+          <h3>SimuPatient</h3>
+          <p>
+            Reframed an LLM-based standardized patient prototype into a more research-ready educational agent system, covering case schema design, dialogue control, assessment logic, and structured logging.
+          </p>
+          <ul>
+            <li>Redesigned the pipeline from case generation to consultation, logging, and scoring</li>
+            <li>Introduced persona consistency, hidden-case logic, and LLM-as-a-Judge style evaluation</li>
+            <li>Helped define the path from demo prototype to a reproducible research artifact</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="meta">Biomedical AI Agent · Drug Repurposing</div>
+          <h3>OrphanCure</h3>
+          <p>
+            Developed a verifiable AI agent prototype for rare-disease drug repurposing by chaining entity resolution, target retrieval, literature search, model reasoning, and evidence checking into a staged workflow.
+          </p>
+          <ul>
+            <li>Designed stage-based agent states with human-in-the-loop entity resolution</li>
+            <li>Integrated OpenTargets and PubMed into a retrieval-augmented biomedical analysis flow</li>
+            <li>Reduced hallucination risk through schema-constrained outputs and post-hoc verification</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>
+          Experience across research, biomedical AI, clinical workflows, AI products, and enterprise data environments.
+        </p>
+      </div>
+      <div class="experience-wrap">
+        <div class="timeline-item">
+          <div class="meta">Scientific Data Team, APAC</div>
+          <h3>Parexel — Data Science Intern</h3>
+          <p>
+            Worked on AI applications in CRO, RWD/RWE, and clinical research processes, including support for a patient recruitment agent initiative and broader workflow analysis in healthcare AI.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="meta">Roleplay Chatbot · Internal Literature Agent</div>
+          <h3>UMU — AI Product / AI Agent Intern</h3>
+          <p>
+            Contributed to testing and prompt design for an AI sales training product, while independently building an internal literature retrieval agent using Dify and GLM.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="meta">Model Governance · Synthetic Tabular Data</div>
+          <h3>SAS — Data Analysis Intern</h3>
+          <p>
+            Participated in model risk scoring logic review for banking scenarios and investigated synthetic tabular data generation as an enterprise-oriented analytical capability.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="meta">Customer Growth Analytics</div>
+          <h3>NTU × McKinsey — Data Science Project</h3>
+          <p>
+            Built analytics around customer segmentation, churn identification, and cross-sell opportunities, then translated quantitative findings into actionable growth recommendations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-head">
+        <h2>Publications & Research Outputs</h2>
+        <p>
+          A dedicated space for publications, manuscripts, reports, posters, and other academic outputs. Replace placeholders below with final titles, venues, and links when available.
+        </p>
+      </div>
+      <div class="pub-grid">
+        <article class="pub-card">
+          <div class="meta">Manuscript in preparation</div>
+          <h3>Perplexity-Based Interpretation of the Genome of <em>Acinetobacter baumannii</em></h3>
+          <p>
+            Research project on multi-scale perplexity analysis with genomic foundation models, focusing on the interpretation of species-level statistical grammar and anomaly-sensitive sequence regions.
+          </p>
+          <div class="pub-links">
+            <a class="mini-btn" href="#">Preprint</a>
+            <a class="mini-btn" href="#">Poster</a>
+            <a class="mini-btn" href="#">Slides</a>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <div class="meta">Review article in development</div>
+          <h3>Mamba-Based State Space Models for Medical Imaging</h3>
+          <p>
+            A structured review of Mamba and related state-space architectures for segmentation, detection, reconstruction, registration, and generative medical imaging tasks.
+          </p>
+          <div class="pub-links">
+            <a class="mini-btn" href="#">Manuscript</a>
+            <a class="mini-btn" href="#">Summary</a>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <div class="meta">Reserved section</div>
+          <h3>Conference Posters, Technical Reports, and Course Research Outputs</h3>
+          <p>
+            Use this section for posters, project reports, reproducible notebooks, GitHub repositories, and any research artifacts you want recruiters or collaborators to browse.
+          </p>
+          <div class="pub-links">
+            <a class="mini-btn" href="https://github.com/Chelsea-19" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="mini-btn" href="#">Reports</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-head">
+        <h2>Research Interests</h2>
+        <p>
+          I am motivated by problems where frontier AI models need to operate under real scientific, clinical, or operational constraints.
+        </p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Topics</h3>
+          <ul>
+            <li>Genomic language models and zero-shot biological signal discovery</li>
+            <li>Medical and biomedical AI agents with state, tools, and safety layers</li>
+            <li>Retrieval, verification, and evidence-backed reasoning systems</li>
+            <li>AI productization in healthcare, life sciences, and scientific workflows</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Working Style</h3>
+          <ul>
+            <li>Start from the scientific or operational problem, not from a model trend alone</li>
+            <li>Emphasize workflow design, structured outputs, logging, and human-in-the-loop control</li>
+            <li>Care about the path from demo to research artifact, then to product prototype</li>
+            <li>Prefer systems that are verifiable, deployable, and useful in real environments</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>
+          I welcome conversations on biomedical AI, genomics, medical agent systems, product-oriented AI, and internship or collaboration opportunities.
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Get in touch</h3>
+          <p><strong>Felix Liang / 梁敬林</strong></p>
+          <p>Email: <a href="mailto:Felix.Liang24@outlook.com">Felix.Liang24@outlook.com</a></p>
+          <p>GitHub: <a href="https://github.com/Chelsea-19" target="_blank" rel="noreferrer">github.com/Chelsea-19</a></p>
+          <div class="pub-links" style="margin-top:14px;">
+            <a class="mini-btn" href="mailto:Felix.Liang24@outlook.com">Email</a>
+            <a class="mini-btn" href="https://github.com/Chelsea-19" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="mini-btn" href="#">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3>Suggested File Structure</h3>
+          <p><code>/index.html</code></p>
+          <p><code>/zh/index.html</code></p>
+          <p><code>/assets/cv/Felix_Liang_CV_EN.pdf</code></p>
+          <p><code>/assets/cv/Felix_Liang_CV_CN.pdf</code></p>
+          <p><code>/assets/img/...</code></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-line">
+      © 2026 Felix Liang. Built for GitHub Pages as an academic and career portfolio.
+    </div>
+  </footer>
+</body>
+</html>
