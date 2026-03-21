@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Felix Liang | Academic & Career Portfolio</title>
-  <meta
-    name="description"
-    content="Felix Liang's academic and career portfolio in biomedical AI, genomics, medical agent systems, and research-to-product workflows."
-  />
+  <title>Felix Liang | Academic & AI for Science Portfolio</title>
+  <meta name="description" content="Felix Liang's academic and career portfolio in biomedical AI, genomics, medical agent systems, and research-to-product workflows." />
   <style>
     :root {
       --bg: #f5f7fb;
@@ -25,6 +22,7 @@
     }
 
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -38,6 +36,11 @@
     a {
       color: var(--accent);
       text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .container {
@@ -65,6 +68,7 @@
     .brand {
       font-weight: 700;
       font-size: 1rem;
+      letter-spacing: 0.2px;
       color: var(--text);
       white-space: nowrap;
     }
@@ -82,7 +86,10 @@
       font-weight: 500;
     }
 
-    .nav-links a:hover { color: var(--accent); }
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--accent);
+    }
 
     .hero {
       padding: 84px 0 40px;
@@ -104,7 +111,10 @@
       box-shadow: var(--shadow);
     }
 
-    .hero-left { padding: 34px; }
+    .hero-left {
+      padding: 34px;
+    }
+
     .hero-right {
       padding: 28px;
       display: flex;
@@ -153,20 +163,18 @@
       border: 1px solid #e2e8f0;
     }
 
-    .action-row,
-    .lang-links,
-    .pub-links {
+    .action-row {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      margin-top: 10px;
     }
 
-    .btn,
-    .mini-btn,
-    .lang-pill {
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       padding: 12px 18px;
       border-radius: 14px;
       border: 1px solid var(--line);
@@ -177,8 +185,7 @@
     }
 
     .btn:hover,
-    .mini-btn:hover,
-    .lang-pill:hover {
+    .btn:focus-visible {
       transform: translateY(-1px);
       border-color: #bfd1e3;
     }
@@ -189,9 +196,17 @@
       color: #fff;
     }
 
-    .btn.primary:hover {
+    .btn.primary:hover,
+    .btn.primary:focus-visible {
       background: var(--accent-2);
       border-color: var(--accent-2);
+    }
+
+    .lang-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
     }
 
     .lang-pill {
@@ -200,6 +215,7 @@
       background: var(--soft);
       color: var(--accent);
       font-size: 0.88rem;
+      font-weight: 700;
     }
 
     .info-list {
@@ -219,7 +235,9 @@
       font-size: 0.95rem;
     }
 
-    section { padding: 18px 0 4px; }
+    section {
+      padding: 18px 0 4px;
+    }
 
     .section-head {
       margin-bottom: 18px;
@@ -237,30 +255,20 @@
       max-width: 760px;
     }
 
-    .grid-2,
-    .projects,
-    .contact-grid {
+    .grid-2 {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
     }
 
-    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .contact-grid { grid-template-columns: 1.1fr 0.9fr; }
-
-    .card,
-    .project-card,
-    .pub-card,
-    .contact-card,
-    .timeline-item {
+    .card {
       padding: 24px;
     }
 
     .card h3,
     .project-card h3,
     .pub-card h3,
-    .contact-card h3,
-    .timeline-item h3 {
+    .contact-card h3 {
       margin-top: 0;
       margin-bottom: 8px;
       font-size: 1.18rem;
@@ -269,10 +277,21 @@
     .card p,
     .project-card p,
     .pub-card p,
-    .contact-card p,
-    .timeline-item p {
+    .contact-card p {
       margin: 0;
       color: var(--muted);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card,
+    .pub-card,
+    .contact-card {
+      padding: 22px;
     }
 
     .meta {
@@ -288,27 +307,57 @@
       color: var(--muted);
     }
 
-    li + li { margin-top: 8px; }
+    li + li {
+      margin-top: 8px;
+    }
 
-    .experience-wrap,
-    .pub-grid {
+    .experience-wrap {
       display: grid;
       gap: 14px;
     }
 
     .timeline-item {
+      padding: 22px;
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 18px;
       box-shadow: var(--shadow);
     }
 
+    .timeline-item h3 {
+      margin: 0 0 6px;
+      font-size: 1.16rem;
+    }
+
+    .pub-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .pub-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
     .mini-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 8px 12px;
       border-radius: 10px;
       background: var(--surface-2);
+      border: 1px solid var(--line);
       font-size: 0.88rem;
+      font-weight: 700;
       color: var(--accent);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
     }
 
     footer {
@@ -356,7 +405,9 @@
         padding: 20px;
       }
 
-      h2 { font-size: 1.68rem; }
+      h2 {
+        font-size: 1.68rem;
+      }
     }
   </style>
 </head>
@@ -378,13 +429,13 @@
   <main class="container">
     <section class="hero" id="top">
       <div class="hero-left">
-        <span class="eyebrow">Academic + Career Portfolio</span>
-        <h1>Building biomedical AI systems from research to real-world workflows.</h1>
+        <span class="eyebrow">Academic + AI for Science Portfolio</span>
+        <h1>I work on biomedical AI and AI for Science systems that connect computational models with scientific questions.</h1>
         <p class="hero-summary">
-          I am Felix Liang, an MSc student in Biomedical Data Science (AI) at Nanyang Technological University. My work sits at the intersection of genomic foundation models, medical AI agents, clinical decision workflows, and AI productization.
+          I am Felix Liang, an MSc student in Biomedical Data Science (AI) at Nanyang Technological University. My work sits across genomics, biomedical AI, and AI for Science, with a particular interest in how computational models can be used to study biological systems in a more structured and interpretable way.
         </p>
         <p class="hero-summary">
-          I am particularly interested in research-to-product pathways: turning frontier models into verifiable, deployable, and workflow-compatible systems for biomedicine, healthcare, and life sciences.
+          I am especially interested in research questions that live between modeling and mechanism: how foundation models represent biological regularities, how agentic workflows can support scientific reasoning, and how AI systems can be designed to generate useful, verifiable outputs for biology and medicine.
         </p>
 
         <div class="badge-row">
@@ -415,7 +466,7 @@
             </div>
             <div class="info-item">
               <strong>Career Interests</strong>
-              <span>Biomedical AI, healthcare AI product, research engineering, and agent system design.</span>
+              <span>AI for Science, biomedical AI research, research engineering, and scientific agent system design.</span>
             </div>
             <div class="info-item">
               <strong>Location</strong>
@@ -430,20 +481,20 @@
       <div class="section-head">
         <h2>About</h2>
         <p>
-          My background combines academic research, biomedical data science, and AI product practice. Beyond model performance, I care about how models enter real workflows: how they connect with data structures, decision rules, governance constraints, user interaction, and verifiable outputs.
+          My background sits between academic research, computational biology, and applied AI system building. I care about model performance, but I am equally interested in what the model is actually capturing, how its outputs should be interpreted, and how it can be embedded into a meaningful scientific workflow.
         </p>
       </div>
       <div class="grid-2">
         <div class="card">
           <h3>Academic Profile</h3>
           <p>
-            My recent work focuses on AI for genomics, medical AI, foundation models, and agentic systems. I am especially interested in how sequence modeling, retrieval, structured state transitions, and evidence grounding can be integrated into biomedical decision support.
+            My recent work focuses on AI for genomics, medical AI, foundation models, and agentic systems. A lot of my curiosity comes from seeing how sequence modeling, retrieval, structured reasoning, and evidence grounding can come together in biomedical decision support.
           </p>
         </div>
         <div class="card">
-          <h3>Professional Profile</h3>
+          <h3>AI for Science Perspective</h3>
           <p>
-            On the applied side, I have worked across clinical research AI, internal knowledge agents, AI training products, model governance, synthetic tabular data, and growth analytics. These experiences shaped my interest in translating research ideas into reliable products and usable systems.
+            Beyond core research, I have also worked across clinical research AI, internal knowledge agents, model governance, synthetic tabular data, and applied analytics. These experiences shaped how I think about AI for Science: not only as a modeling problem, but as a systems problem involving evidence, workflow design, human oversight, and scientific usefulness.
           </p>
         </div>
       </div>
@@ -453,29 +504,33 @@
       <div class="section-head">
         <h2>Selected Projects</h2>
         <p>
-          Representative work across genomic modeling, medical agent systems, and applied AI workflows. Each project reflects a shared theme: turning advanced models into structured, trustworthy, and decision-oriented systems.
+          Representative work across genomic modeling, biomedical agent systems, and AI for Science workflows. Across these projects, I am consistently interested in how models can reveal biological structure, support scientific reasoning, and operate within interpretable system designs.
         </p>
       </div>
 
       <div class="projects">
         <article class="project-card">
-          <div class="meta">NTU Research Project · Genomics · Foundation Models</div>
+          <div class="meta">NTU Research Project · Genomics · Foundation Models · AI for Science</div>
           <h3>Evo 2 Genomic Language Model</h3>
           <p>
-            Designed and implemented a multi-scale perplexity analysis framework for <em>Acinetobacter baumannii</em>, spanning replicon-level, fixed-window, and gene-centric dynamic-window analysis to identify regions deviating from species-level statistical grammar.
+            I designed and implemented a multi-scale perplexity analysis framework for <em>Acinetobacter baumannii</em>, spanning replicon-level, fixed-window, and gene-centric dynamic-window analysis. The central question was whether language-model signals could be used not only for prediction, but also for interpreting biological regularities and identifying regions that deviate from species-level genomic grammar.
           </p>
           <ul>
             <li>Built the experimental pipeline from hypothesis framing to interpretation and visualization</li>
             <li>Developed scripts for long-sequence inference, perplexity analysis, and embedding extraction under HPC constraints</li>
             <li>Extended the research direction toward a lab-embedded Genomic Agent architecture with distillation and retrieval grounding</li>
           </ul>
+          <div class="pub-links">
+            <a class="mini-btn" href="#">Project Page</a>
+            <a class="mini-btn" href="#publications">Related Output</a>
+          </div>
         </article>
 
         <article class="project-card">
           <div class="meta">Parexel · Clinical AI · RWD/RWE Workflow</div>
           <h3>Patient Recruitment Agent (PRA)</h3>
           <p>
-            Contributed to workflow abstraction and task decomposition for an AI-assisted patient recruitment system in clinical research, with emphasis on eligibility logic, structured extraction, and deployment realism in CRO settings.
+            In this work, I contributed to the workflow design of an AI-assisted patient recruitment system for clinical research. Although clinically oriented, the project also shaped my research perspective on scientific AI systems: good performance depends not only on extraction quality, but on how reasoning steps, constraints, and evidence are organized across the full workflow.
           </p>
           <ul>
             <li>Mapped clinical text into structured eligibility conditions and downstream storage logic</li>
@@ -488,7 +543,7 @@
           <div class="meta">NTU Research Internship · Medical Education Agent</div>
           <h3>SimuPatient</h3>
           <p>
-            Reframed an LLM-based standardized patient prototype into a more research-ready educational agent system, covering case schema design, dialogue control, assessment logic, and structured logging.
+            I helped rethink an LLM-based standardized patient prototype as a more research-ready educational agent system. This meant moving beyond a functional demo and asking how the system could support reproducibility, structured evaluation, and more rigorous study in medical education settings.
           </p>
           <ul>
             <li>Redesigned the pipeline from case generation to consultation, logging, and scoring</li>
@@ -501,7 +556,7 @@
           <div class="meta">Biomedical AI Agent · Drug Repurposing</div>
           <h3>OrphanCure</h3>
           <p>
-            Developed a verifiable AI agent prototype for rare-disease drug repurposing by chaining entity resolution, target retrieval, literature search, model reasoning, and evidence checking into a staged workflow.
+            I developed a verifiable AI agent prototype for rare-disease drug repurposing by connecting entity resolution, target retrieval, literature search, model reasoning, and evidence checking into one staged workflow. For me, this project reflected a core AI for Science idea: an answer is more useful when it is connected to traceable evidence, explicit reasoning stages, and domain-relevant verification.
           </p>
           <ul>
             <li>Designed stage-based agent states with human-in-the-loop entity resolution</li>
@@ -516,7 +571,7 @@
       <div class="section-head">
         <h2>Experience</h2>
         <p>
-          Experience across research, biomedical AI, clinical workflows, AI products, and enterprise data environments.
+          Experience across research, biomedical AI, scientific workflows, clinical systems, and applied data environments.
         </p>
       </div>
       <div class="experience-wrap">
@@ -527,7 +582,6 @@
             Worked on AI applications in CRO, RWD/RWE, and clinical research processes, including support for a patient recruitment agent initiative and broader workflow analysis in healthcare AI.
           </p>
         </div>
-
         <div class="timeline-item">
           <div class="meta">Roleplay Chatbot · Internal Literature Agent</div>
           <h3>UMU — AI Product / AI Agent Intern</h3>
@@ -535,7 +589,6 @@
             Contributed to testing and prompt design for an AI sales training product, while independently building an internal literature retrieval agent using Dify and GLM.
           </p>
         </div>
-
         <div class="timeline-item">
           <div class="meta">Model Governance · Synthetic Tabular Data</div>
           <h3>SAS — Data Analysis Intern</h3>
@@ -543,7 +596,6 @@
             Participated in model risk scoring logic review for banking scenarios and investigated synthetic tabular data generation as an enterprise-oriented analytical capability.
           </p>
         </div>
-
         <div class="timeline-item">
           <div class="meta">Customer Growth Analytics</div>
           <h3>NTU × McKinsey — Data Science Project</h3>
@@ -558,7 +610,7 @@
       <div class="section-head">
         <h2>Publications & Research Outputs</h2>
         <p>
-          A dedicated space for publications, manuscripts, reports, posters, and other academic outputs. Replace placeholders below with final titles, venues, and links when available.
+          A dedicated space for publications, manuscripts, reports, posters, and other academic outputs. You can gradually replace placeholders below with final titles, venues, and links.
         </p>
       </div>
       <div class="pub-grid">
@@ -594,7 +646,7 @@
             Use this section for posters, project reports, reproducible notebooks, GitHub repositories, and any research artifacts you want recruiters or collaborators to browse.
           </p>
           <div class="pub-links">
-            <a class="mini-btn" href="https://github.com/Chelsea-19" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="mini-btn" href="#">GitHub</a>
             <a class="mini-btn" href="#">Reports</a>
           </div>
         </article>
@@ -605,7 +657,7 @@
       <div class="section-head">
         <h2>Research Interests</h2>
         <p>
-          I am motivated by problems where frontier AI models need to operate under real scientific, clinical, or operational constraints.
+          I am most motivated by problems where AI models need to operate under real scientific, biological, or clinical constraints, and where interpretation matters as much as performance.
         </p>
       </div>
       <div class="grid-2">
@@ -615,15 +667,15 @@
             <li>Genomic language models and zero-shot biological signal discovery</li>
             <li>Medical and biomedical AI agents with state, tools, and safety layers</li>
             <li>Retrieval, verification, and evidence-backed reasoning systems</li>
-            <li>AI productization in healthcare, life sciences, and scientific workflows</li>
+            <li>AI for Science workflows in healthcare, life sciences, and computational biology</li>
           </ul>
         </div>
         <div class="card">
           <h3>Working Style</h3>
           <ul>
-            <li>Start from the scientific or operational problem, not from a model trend alone</li>
+            <li>Start from the scientific question or biological problem, not from a model trend alone</li>
             <li>Emphasize workflow design, structured outputs, logging, and human-in-the-loop control</li>
-            <li>Care about the path from demo to research artifact, then to product prototype</li>
+            <li>Care about the path from exploratory prototype to research artifact and robust scientific workflow</li>
             <li>Prefer systems that are verifiable, deployable, and useful in real environments</li>
           </ul>
         </div>
@@ -634,7 +686,7 @@
       <div class="section-head">
         <h2>Contact</h2>
         <p>
-          I welcome conversations on biomedical AI, genomics, medical agent systems, product-oriented AI, and internship or collaboration opportunities.
+          I am always happy to connect with people working on biomedical AI, genomics, AI for Science, or scientific agent systems. If you think my background could be relevant to your lab, research group, or technical team, I would be glad to hear from you.
         </p>
       </div>
       <div class="contact-grid">
@@ -643,20 +695,27 @@
           <p><strong>Felix Liang / 梁敬林</strong></p>
           <p>Email: <a href="mailto:Felix.Liang24@outlook.com">Felix.Liang24@outlook.com</a></p>
           <p>GitHub: <a href="https://github.com/Chelsea-19" target="_blank" rel="noreferrer">github.com/Chelsea-19</a></p>
-          <div class="pub-links" style="margin-top:14px;">
+          <div class="pub-links">
             <a class="mini-btn" href="mailto:Felix.Liang24@outlook.com">Email</a>
             <a class="mini-btn" href="https://github.com/Chelsea-19" target="_blank" rel="noreferrer">GitHub</a>
             <a class="mini-btn" href="#">LinkedIn</a>
           </div>
         </div>
-
         <div class="contact-card">
-          <h3>Suggested File Structure</h3>
-          <p><code>/index.html</code></p>
-          <p><code>/zh/index.html</code></p>
-          <p><code>/assets/cv/Felix_Liang_CV_EN.pdf</code></p>
-          <p><code>/assets/cv/Felix_Liang_CV_CN.pdf</code></p>
-          <p><code>/assets/img/...</code></p>
+          <h3>GitHub Pages Structure</h3>
+          <p>
+            Recommended deployment structure:
+            <br />
+            <code>/index.html</code>
+            <br />
+            <code>/zh/index.html</code>
+            <br />
+            <code>/assets/cv/Felix_Liang_CV_EN.pdf</code>
+            <br />
+            <code>/assets/cv/Felix_Liang_CV_CN.pdf</code>
+            <br />
+            <code>/assets/img/...</code>
+          </p>
         </div>
       </div>
     </section>
