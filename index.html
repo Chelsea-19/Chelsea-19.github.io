@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chelsea Lyon | AI4Science Researcher</title>
-  <meta name="description" content="Chelsea Lyon's bilingual academic and career portfolio in AI4Science, spanning bioinformatics, healthcare AI, and public health." />
+  <title>Chelsea (Felix) Lyon | AI4Science Researcher</title>
+  <meta name="description" content="Chelsea (Felix) Lyon's bilingual academic and career portfolio in AI4Science, spanning bioinformatics, healthcare AI, and public health." />
   <style>
     :root {
       --bg: #f6f7fb;
@@ -58,286 +58,89 @@
       background: color-mix(in oklab, var(--bg-elev) 88%, transparent);
       border-bottom: 1px solid var(--line);
     }
-    .nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .brand {
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      color: var(--text);
-    }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { font-weight: 800; letter-spacing: -0.02em; display: flex; align-items: center; gap: 0.8rem; color: var(--text); }
     .brand-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: white;
-      box-shadow: var(--shadow);
-      font-size: 0.92rem;
+      width: 40px; height: 40px; border-radius: 14px; display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; box-shadow: var(--shadow); font-size: 0.92rem;
     }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
-      justify-content: flex-end;
-    }
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-    .toolbar {
-      display: flex;
-      gap: 0.7rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: flex-end; }
+    .nav-links a { color: var(--muted); font-size: 0.95rem; font-weight: 600; }
+    .toolbar { display: flex; gap: 0.7rem; align-items: center; flex-wrap: wrap; }
     .btn, .chip-btn {
-      border: 1px solid var(--line);
-      background: var(--bg-strong);
-      color: var(--text);
-      border-radius: 999px;
-      padding: 0.78rem 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform .18s ease, border-color .18s ease, background .18s ease;
-      box-shadow: var(--shadow);
+      border: 1px solid var(--line); background: var(--bg-strong); color: var(--text); border-radius: 999px;
+      padding: 0.78rem 1rem; font-weight: 700; cursor: pointer; transition: transform .18s ease, border-color .18s ease, background .18s ease; box-shadow: var(--shadow);
     }
     .chip-btn { padding: 0.58rem 0.9rem; box-shadow: none; font-weight: 600; }
     .btn:hover, .chip-btn:hover { transform: translateY(-1px); text-decoration: none; }
-    .btn.primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: white;
-      border: none;
-    }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; border: none; }
+    
+    /* Academic button specific styling */
+    .btn-academic { background: transparent; border: 1px solid var(--line); color: var(--text); display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.84rem; padding: 0.42rem 0.76rem; border-radius: 999px; cursor: pointer; transition: all 0.2s; }
+    .btn-academic:hover { background: var(--chip); border-color: var(--accent); }
 
     section { padding: 88px 0; }
-    .hero {
-      padding: 70px 0 54px;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.95fr;
-      gap: 1.3rem;
-      align-items: stretch;
-    }
-    .card {
-      background: color-mix(in oklab, var(--bg-strong) 90%, transparent);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
+    .hero { padding: 70px 0 54px; }
+    .hero-grid { display: grid; grid-template-columns: 1.3fr 0.95fr; gap: 1.3rem; align-items: stretch; }
+    .card { background: color-mix(in oklab, var(--bg-strong) 90%, transparent); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow); transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-3px); }
     .hero-main { padding: 2rem; }
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.4rem 0.8rem;
-      border-radius: 999px;
-      background: var(--chip);
-      color: var(--accent);
-      font-size: 0.84rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.8rem; border-radius: 999px;
+      background: var(--chip); color: var(--accent); font-size: 0.84rem; font-weight: 800; letter-spacing: 0.02em; text-transform: uppercase;
     }
-    h1 {
-      font-size: clamp(2.35rem, 5vw, 4.65rem);
-      line-height: 1.03;
-      letter-spacing: -0.05em;
-      margin: 1rem 0 1rem;
-    }
-    .hero-subtitle {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 760px;
-      margin-bottom: 1.2rem;
-    }
-    .hero-actions, .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-top: 1.2rem;
-    }
+    h1 { font-size: clamp(2.35rem, 5vw, 4.65rem); line-height: 1.03; letter-spacing: -0.05em; margin: 1rem 0 1rem; }
+    .hero-subtitle { font-size: 1.1rem; color: var(--muted); max-width: 760px; margin-bottom: 1.2rem; }
+    .hero-actions, .hero-links { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.2rem; }
     .pill-row { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.4rem; }
-    .pill {
-      border-radius: 999px;
-      padding: 0.55rem 0.85rem;
-      background: var(--chip);
-      color: var(--text);
-      font-weight: 700;
-      font-size: 0.92rem;
-      border: 1px solid transparent;
-    }
+    .pill { border-radius: 999px; padding: 0.55rem 0.85rem; background: var(--chip); color: var(--text); font-weight: 700; font-size: 0.92rem; border: 1px solid transparent; }
 
-    .hero-side {
-      padding: 1.5rem;
-      display: grid;
-      gap: 1rem;
-      align-content: start;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.9rem;
-    }
-    .stat {
-      padding: 1rem;
-      border-radius: 22px;
-      background: linear-gradient(180deg, color-mix(in oklab, var(--bg-strong) 90%, transparent), color-mix(in oklab, var(--bg-strong) 96%, transparent));
-      border: 1px solid var(--line);
-    }
-    .stat strong {
-      display: block;
-      font-size: 1.65rem;
-      letter-spacing: -0.04em;
-      margin-bottom: 0.2rem;
-    }
+    .hero-side { padding: 1.5rem; display: grid; gap: 1rem; align-content: start; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+    .stat { padding: 1rem; border-radius: 22px; background: linear-gradient(180deg, color-mix(in oklab, var(--bg-strong) 90%, transparent), color-mix(in oklab, var(--bg-strong) 96%, transparent)); border: 1px solid var(--line); }
+    .stat strong { display: block; font-size: 1.65rem; letter-spacing: -0.04em; margin-bottom: 0.2rem; }
     .stat span { color: var(--muted); font-size: 0.95rem; }
-    .focus-list {
-      display: grid;
-      gap: 0.9rem;
-    }
-    .focus-item {
-      padding: 1rem 1.05rem;
-      border-radius: 20px;
-      border: 1px solid var(--line);
-      background: color-mix(in oklab, var(--bg-strong) 92%, transparent);
-    }
+    .focus-list { display: grid; gap: 0.9rem; }
+    .focus-item { padding: 1rem 1.05rem; border-radius: 20px; border: 1px solid var(--line); background: color-mix(in oklab, var(--bg-strong) 92%, transparent); }
     .focus-item strong { display: block; margin-bottom: 0.3rem; }
     .focus-item p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
-    .section-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 1rem;
-      margin-bottom: 1.4rem;
-    }
-    .section-title h2 {
-      margin: 0;
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      letter-spacing: -0.04em;
-    }
-    .section-title p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 700px;
-    }
+    .section-title { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 1.4rem; }
+    .section-title h2 { margin: 0; font-size: clamp(1.8rem, 3vw, 2.8rem); letter-spacing: -0.04em; }
+    .section-title p { margin: 0; color: var(--muted); max-width: 700px; }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 1.2rem;
-    }
-    .bio-card, .fit-card, .timeline-card, .project-card, .pub-card, .contact-card {
-      padding: 1.6rem;
-    }
-    .check-list {
-      display: grid;
-      gap: 0.8rem;
-      margin-top: 1rem;
-    }
-    .check {
-      display: grid;
-      grid-template-columns: 24px 1fr;
-      gap: 0.75rem;
-      align-items: start;
-    }
-    .check i {
-      width: 24px; height: 24px; border-radius: 50%;
-      display: inline-grid; place-items: center;
-      background: var(--chip); color: var(--accent); font-style: normal; font-weight: 800;
-    }
+    .two-col { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 1.2rem; }
+    .bio-card, .fit-card, .timeline-card, .project-card, .pub-card, .contact-card { padding: 1.6rem; }
+    .check-list { display: grid; gap: 0.8rem; margin-top: 1rem; }
+    .check { display: grid; grid-template-columns: 24px 1fr; gap: 0.75rem; align-items: start; }
+    .check i { width: 24px; height: 24px; border-radius: 50%; display: inline-grid; place-items: center; background: var(--chip); color: var(--accent); font-style: normal; font-weight: 800; }
 
-    .projects-grid, .pub-grid, .contact-grid {
-      display: grid;
-      gap: 1rem;
-    }
+    .projects-grid, .pub-grid, .contact-grid { display: grid; gap: 1rem; }
     .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .pub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .project-card h3, .pub-card h3, .timeline-card h3 { margin: 0.25rem 0 0.5rem; font-size: 1.4rem; }
     .kicker { color: var(--accent); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.03em; text-transform: uppercase; }
     .muted { color: var(--muted); }
     .mini-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-    .mini-tags span, .evidence-links a {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      padding: 0.42rem 0.76rem;
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.84rem;
-      font-weight: 700;
-      background: color-mix(in oklab, var(--bg-strong) 92%, transparent);
-    }
-    .evidence-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-top: 1rem;
-    }
-    .impact {
-      margin-top: 1rem;
-      padding: 1rem;
-      border-radius: 18px;
-      background: linear-gradient(135deg, color-mix(in oklab, var(--chip) 85%, transparent), transparent);
-      border: 1px dashed var(--line);
-      color: var(--muted);
-    }
+    .mini-tags span, .evidence-links a { display: inline-flex; align-items: center; border-radius: 999px; padding: 0.42rem 0.76rem; border: 1px solid var(--line); color: var(--muted); font-size: 0.84rem; font-weight: 700; background: color-mix(in oklab, var(--bg-strong) 92%, transparent); }
+    .evidence-links { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1rem; align-items: center;}
+    .impact { margin-top: 1rem; padding: 1rem; border-radius: 18px; background: linear-gradient(135deg, color-mix(in oklab, var(--chip) 85%, transparent), transparent); border: 1px dashed var(--line); color: var(--muted); }
 
-    .timeline {
-      display: grid;
-      gap: 1rem;
-    }
-    .timeline-card {
-      position: relative;
-      overflow: hidden;
-    }
-    .timeline-card::before {
-      content: "";
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 4px;
-      background: linear-gradient(180deg, var(--accent), var(--accent-2));
-    }
-    .timeline-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem 1rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-      margin-bottom: 0.75rem;
-    }
-    ul.clean {
-      margin: 0.8rem 0 0;
-      padding-left: 1.2rem;
-    }
+    .timeline { display: grid; gap: 1rem; }
+    .timeline-card { position: relative; overflow: hidden; }
+    .timeline-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: linear-gradient(180deg, var(--accent), var(--accent-2)); }
+    .timeline-meta { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+    ul.clean { margin: 0.8rem 0 0; padding-left: 1.2rem; }
     ul.clean li { margin: 0.45rem 0; }
 
     .contact-grid { grid-template-columns: 1.1fr 0.9fr; }
     .contact-card p { color: var(--muted); }
-    .footer {
-      padding: 28px 0 70px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
+    .footer { padding: 28px 0 70px; color: var(--muted); font-size: 0.92rem; }
+    .note { margin-top: 0.9rem; color: var(--muted); font-size: 0.92rem; }
 
-    .note {
-      margin-top: 0.9rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
+    /* Scroll Reveal Animation Classes */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 1000px) {
       .hero-grid, .two-col, .projects-grid, .pub-grid, .contact-grid { grid-template-columns: 1fr; }
@@ -358,7 +161,7 @@
     <div class="container nav">
       <a class="brand" href="#top">
         <span class="brand-mark">CL</span>
-        <span>Chelsea Lyon · AI4Science</span>
+        <span>Chelsea (Felix) Lyon · AI4Science</span>
       </a>
       <div class="nav-links">
         <a href="#about">About</a>
@@ -377,9 +180,9 @@
   <main id="top">
     <section class="hero">
       <div class="container hero-grid">
-        <div class="card hero-main">
+        <div class="card hero-main reveal">
           <div class="eyebrow">AI4Science · Bio · Healthcare · Public Health</div>
-          <h1>Chelsea Lyon</h1>
+          <h1>Chelsea (Felix) Lyon</h1>
           <p class="hero-subtitle">
             I build <strong>AI4Science research systems</strong> that connect biological questions, healthcare workflows, and public-health evidence with interpretable modeling, verifiable outputs, and research-to-product thinking.
           </p>
@@ -388,7 +191,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn primary" href="#projects">Explore Selected Work</a>
-            <a class="btn" href="assets/cv/Felix_Liang_CV_EN.pdf">Download CV</a>
+            <a class="btn" href="assets/cv/Felix_Liang_CV_EN.pdf">📄 Download CV</a>
           </div>
           <div class="hero-links">
             <a class="chip-btn" href="https://github.com/Chelsea-19">GitHub</a>
@@ -404,7 +207,7 @@
           </div>
         </div>
 
-        <aside class="card hero-side">
+        <aside class="card hero-side reveal">
           <div class="stats-grid">
             <div class="stat"><strong>3</strong><span>Primary domains: Bio, Healthcare, Public Health</span></div>
             <div class="stat"><strong>2</strong><span>Modes: Academic research + career portfolio</span></div>
@@ -431,7 +234,7 @@
 
     <section id="about">
       <div class="container two-col">
-        <div class="card bio-card">
+        <div class="card bio-card reveal">
           <div class="section-title">
             <div>
               <p class="kicker">About</p>
@@ -451,7 +254,7 @@
           </div>
         </div>
 
-        <div class="card fit-card">
+        <div class="card fit-card reveal">
           <div class="section-title">
             <div>
               <p class="kicker">Positioning</p>
@@ -471,7 +274,7 @@
 
     <section id="projects">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title reveal">
           <div>
             <p class="kicker">Selected work</p>
             <h2>Projects organized by scientific value</h2>
@@ -479,7 +282,7 @@
           <p>Instead of listing many unrelated builds, these cards foreground the scientific problem, the system contribution, and the output evidence you can attach.</p>
         </div>
         <div class="projects-grid">
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <p class="kicker">Bio · Foundation Models · NTU Research</p>
             <h3>Evo 2 Genomic Language Model</h3>
             <p class="muted">Designed a multi-scale interpretation framework for <em>Acinetobacter baumannii</em>, spanning replicon-level, fixed-window, dynamic-window, and embedding-based analyses to study species-level genomic regularities and anomalous regions.</p>
@@ -494,14 +297,13 @@
               <a href="#">Poster / slides</a>
               <a href="#">Technical report</a>
               <a href="#">GitHub / code</a>
-              <a href="#">Figure gallery</a>
             </div>
             <div class="mini-tags">
               <span>Genomics</span><span>Perplexity</span><span>Embeddings</span><span>HPC</span><span>Interpretability</span>
             </div>
           </article>
 
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <p class="kicker">Healthcare · Clinical AI · Parexel</p>
             <h3>Patient Recruitment Agent (PRA)</h3>
             <p class="muted">Contributed to an AI-assisted clinical workflow for patient recruitment, emphasizing how eligibility logic, evidence extraction, and downstream storage design fit regulatory and operational constraints.</p>
@@ -522,7 +324,7 @@
             </div>
           </article>
 
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <p class="kicker">Healthcare · Medical Education · Agent Systems</p>
             <h3>SimuPatient</h3>
             <p class="muted">Helped reframe an LLM-based standardized-patient prototype into a more research-ready educational agent system with stronger reproducibility, persona consistency, and structured evaluation.</p>
@@ -542,7 +344,7 @@
             </div>
           </article>
 
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <p class="kicker">Public Health · Evidence Agent · Drug Repurposing</p>
             <h3>OrphanCure</h3>
             <p class="muted">Built a verifiable biomedical agent prototype for rare-disease drug repurposing by connecting entity resolution, target retrieval, literature search, staged reasoning, and post-hoc evidence checking.</p>
@@ -568,7 +370,7 @@
 
     <section id="experience">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title reveal">
           <div>
             <p class="kicker">Experience</p>
             <h2>Research and industry timeline</h2>
@@ -576,7 +378,7 @@
           <p>Each entry keeps the concise, recruiter-friendly structure of a strong online CV, while adding reserved space for evidence and project-level detail.</p>
         </div>
         <div class="timeline">
-          <article class="card timeline-card">
+          <article class="card timeline-card reveal">
             <p class="kicker">Scientific Data Team, APAC</p>
             <h3>Parexel — Data Science Intern</h3>
             <div class="timeline-meta"><span>Healthcare AI / CRO</span><span>Singapore</span><span>Reserved for dates</span></div>
@@ -588,7 +390,7 @@
             </div>
           </article>
 
-          <article class="card timeline-card">
+          <article class="card timeline-card reveal">
             <p class="kicker">Roleplay Chatbot · Internal Literature Agent</p>
             <h3>UMU — AI Product / AI Agent Intern</h3>
             <div class="timeline-meta"><span>Applied LLM Systems</span><span>Reserved for location</span><span>Reserved for dates</span></div>
@@ -600,10 +402,10 @@
             </div>
           </article>
 
-          <article class="card timeline-card">
+          <article class="card timeline-card reveal">
             <p class="kicker">Model Governance · Synthetic Tabular Data</p>
             <h3>SAS — Data Analysis Intern</h3>
-            <div class="timeline-meta"><span>Enterprise AI / Analytics</span><span>Reserved for location</span><span>Reserved for dates</span></div>
+            <div class="timeline-meta"><span>Enterprise AI / Analytics</span><span>Shanghai, China</span><span>Jan 2024 - Mar 2024</span></div>
             <p class="muted">Participated in model risk scoring review for banking scenarios and investigated synthetic tabular data generation as an enterprise-facing analytical capability.</p>
             <div class="evidence-links">
               <a href="#">Summary slide</a>
@@ -611,7 +413,7 @@
             </div>
           </article>
 
-          <article class="card timeline-card">
+          <article class="card timeline-card reveal">
             <p class="kicker">Customer Growth Analytics</p>
             <h3>NTU × McKinsey — Data Science Project</h3>
             <div class="timeline-meta"><span>Applied Analytics</span><span>Singapore</span><span>Reserved for dates</span></div>
@@ -628,7 +430,7 @@
 
     <section id="outputs">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title reveal">
           <div>
             <p class="kicker">Outputs</p>
             <h2>Publications, reports, posters, and research artifacts</h2>
@@ -636,7 +438,7 @@
           <p>This section fixes a common portfolio weakness: instead of only listing skills, it lets visitors inspect evidence.</p>
         </div>
         <div class="pub-grid">
-          <article class="card pub-card">
+          <article class="card pub-card reveal">
             <p class="kicker">Manuscript in preparation</p>
             <h3>Perplexity-Based Interpretation of the Genome of <em>Acinetobacter baumannii</em></h3>
             <p class="muted">Research project on multi-scale perplexity analysis with genomic foundation models, focusing on species-level genomic grammar and anomaly-sensitive sequence regions.</p>
@@ -644,11 +446,11 @@
               <a href="#">Manuscript</a>
               <a href="#">Poster</a>
               <a href="#">Slides</a>
-              <a href="#">Figures</a>
+              <button class="btn-academic" onclick="navigator.clipboard.writeText('@article{lyon2026acinetobacter,\n  title={Perplexity-Based Interpretation of the Genome of Acinetobacter baumannii},\n  author={Lyon, Chelsea},\n  year={2026}\n}'); alert('BibTeX copied to clipboard!');">📋 Copy BibTeX</button>
             </div>
           </article>
 
-          <article class="card pub-card">
+          <article class="card pub-card reveal">
             <p class="kicker">Review article in development</p>
             <h3>Mamba-Based State Space Models for Medical Imaging</h3>
             <p class="muted">A structured review of Mamba and related state-space architectures for segmentation, detection, reconstruction, registration, and generative medical imaging tasks.</p>
@@ -659,7 +461,7 @@
             </div>
           </article>
 
-          <article class="card pub-card">
+          <article class="card pub-card reveal">
             <p class="kicker">Public health research</p>
             <h3>Bacterial foodborne disease incidence during COVID-19</h3>
             <p class="muted">Systematic-review and quantitative-analysis direction focusing on incidence patterns, risk factors, and pandemic-era public-health changes.</p>
@@ -670,7 +472,7 @@
             </div>
           </article>
 
-          <article class="card pub-card">
+          <article class="card pub-card reveal">
             <p class="kicker">Reserved section</p>
             <h3>Posters, notebooks, reproducible reports, and GitHub outputs</h3>
             <p class="muted">Use this block to surface course research outputs, project reports, reproducible notebooks, and strong GitHub repositories for both academic and hiring audiences.</p>
@@ -686,7 +488,7 @@
 
     <section id="contact">
       <div class="container contact-grid">
-        <div class="card contact-card">
+        <div class="card contact-card reveal">
           <p class="kicker">Contact</p>
           <h2>Open to research, internships, and AI4Science collaborations</h2>
           <p>
@@ -697,10 +499,10 @@
             <a class="btn" href="https://github.com/Chelsea-19">View GitHub</a>
           </div>
         </div>
-        <div class="card contact-card">
+        <div class="card contact-card reveal">
           <p class="kicker">Quick facts</p>
           <ul class="clean">
-            <li><strong>Name:</strong> Chelsea Lyon / 梁敬林</li>
+            <li><strong>Name:</strong> Chelsea (Felix) Lyon / 梁敬林</li>
             <li><strong>Base:</strong> Singapore</li>
             <li><strong>Program:</strong> MSc Biomedical Data Science (AI), NTU</li>
             <li><strong>Theme:</strong> AI4Science researcher across bio, healthcare, and public health</li>
@@ -712,11 +514,12 @@
   </main>
 
   <div class="container footer">
-    <div>© 2026 Chelsea Lyon. Bilingual academic + career portfolio for GitHub Pages.</div>
+    <div>© 2026 Chelsea (Felix) Lyon. Bilingual academic + career portfolio for GitHub Pages.</div>
   </div>
 
   <script>
     (function () {
+      // Theme Toggle Logic
       const root = document.documentElement;
       const button = document.getElementById('themeToggle');
       const saved = localStorage.getItem('chelsea-theme');
@@ -734,6 +537,21 @@
         root.dataset.theme = theme;
         button.textContent = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
       }
+
+      // Scroll Reveal Animation Logic
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 100; // triggers earlier
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          }
+        }
+      }
+      window.addEventListener("scroll", reveal);
+      reveal(); // Trigger once on load
     })();
   </script>
 </body>
