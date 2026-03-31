@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chelsea Lyon | AI4Science 研究者</title>
-  <meta name="description" content="Chelsea Lyon 的中英双语个人主页，聚焦 AI4Science、Bio、Healthcare 与 Public Health。" />
+  <title>Chelsea (Felix) Lyon | AI4Science 研究者</title>
+  <meta name="description" content="Chelsea (Felix) Lyon 的中英双语个人主页，聚焦 AI4Science、Bio、Healthcare 与 Public Health。" />
   <style>
     :root {
       --bg: #f6f7fb;
@@ -74,11 +74,15 @@
     .chip-btn { padding: 0.58rem 0.9rem; box-shadow: none; font-weight: 600; }
     .btn:hover, .chip-btn:hover { transform: translateY(-1px); text-decoration: none; }
     .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; border: none; }
+    
+    .btn-academic { background: transparent; border: 1px solid var(--line); color: var(--text); display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.84rem; padding: 0.42rem 0.76rem; border-radius: 999px; cursor: pointer; transition: all 0.2s; }
+    .btn-academic:hover { background: var(--chip); border-color: var(--accent); }
 
     section { padding: 88px 0; }
     .hero { padding: 70px 0 54px; }
     .hero-grid { display: grid; grid-template-columns: 1.3fr 0.95fr; gap: 1.3rem; align-items: stretch; }
-    .card { background: color-mix(in oklab, var(--bg-strong) 90%, transparent); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow); }
+    .card { background: color-mix(in oklab, var(--bg-strong) 90%, transparent); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow); transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-3px); }
     .hero-main { padding: 2rem; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.8rem; border-radius: 999px;
@@ -123,7 +127,7 @@
       border: 1px solid var(--line); color: var(--muted); font-size: 0.84rem; font-weight: 700;
       background: color-mix(in oklab, var(--bg-strong) 92%, transparent);
     }
-    .evidence-links { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1rem; }
+    .evidence-links { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1rem; align-items: center; }
     .impact { margin-top: 1rem; padding: 1rem; border-radius: 18px; background: linear-gradient(135deg, color-mix(in oklab, var(--chip) 85%, transparent), transparent); border: 1px dashed var(--line); color: var(--muted); }
 
     .timeline { display: grid; gap: 1rem; }
@@ -136,6 +140,10 @@
     .contact-card p { color: var(--muted); }
     .footer { padding: 28px 0 70px; color: var(--muted); font-size: 0.92rem; }
     .note { margin-top: 0.9rem; color: var(--muted); font-size: 0.92rem; }
+
+    /* Scroll Reveal Animation Classes */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 1000px) {
       .hero-grid, .two-col, .projects-grid, .pub-grid, .contact-grid { grid-template-columns: 1fr; }
@@ -156,7 +164,7 @@
     <div class="container nav">
       <a class="brand" href="#top">
         <span class="brand-mark">CL</span>
-        <span>Chelsea Lyon · AI4Science</span>
+        <span>Chelsea (Felix) Lyon · AI4Science</span>
       </a>
       <div class="nav-links">
         <a href="#about">关于</a>
@@ -175,9 +183,9 @@
   <main id="top">
     <section class="hero">
       <div class="container hero-grid">
-        <div class="card hero-main">
+        <div class="card hero-main reveal">
           <div class="eyebrow">AI4Science · 生物 · 医疗健康 · 公共卫生</div>
-          <h1>Chelsea Lyon</h1>
+          <h1>Chelsea (Felix) Lyon</h1>
           <p class="hero-subtitle">
             我构建的是面向<strong>AI4Science</strong>的研究型系统，把生物学问题、医疗工作流和公共卫生证据，与可解释建模、可验证输出以及 research-to-product 思维连接起来。
           </p>
@@ -186,7 +194,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn primary" href="#projects">查看代表项目</a>
-            <a class="btn" href="/assets/cv/Felix_Liang_CV_CN.pdf">下载中文简历</a>
+            <a class="btn" href="/assets/cv/Felix_Liang_CV_CN.pdf">📄 下载中文简历</a>
           </div>
           <div class="hero-links">
             <a class="chip-btn" href="https://github.com/Chelsea-19">GitHub</a>
@@ -202,7 +210,7 @@
           </div>
         </div>
 
-        <aside class="card hero-side">
+        <aside class="card hero-side reveal">
           <div class="stats-grid">
             <div class="stat"><strong>3</strong><span>核心方向：Bio / Healthcare / Public Health</span></div>
             <div class="stat"><strong>2</strong><span>双重用途：学术展示 + 求职展示</span></div>
@@ -229,7 +237,7 @@
 
     <section id="about">
       <div class="container two-col">
-        <div class="card bio-card">
+        <div class="card bio-card reveal">
           <div class="section-title">
             <div>
               <p class="kicker">About</p>
@@ -249,7 +257,7 @@
           </div>
         </div>
 
-        <div class="card fit-card">
+        <div class="card fit-card reveal">
           <div class="section-title">
             <div>
               <p class="kicker">Positioning</p>
@@ -269,7 +277,7 @@
 
     <section id="projects">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title reveal">
           <div>
             <p class="kicker">Selected work</p>
             <h2>按科学价值组织的代表项目</h2>
@@ -277,7 +285,7 @@
           <p>不是简单堆很多项目，而是突出科学问题、系统贡献和可展示成果。</p>
         </div>
         <div class="projects-grid">
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <p class="kicker">Bio · Foundation Models · NTU Research</p>
             <h3>Evo 2 Genomic Language Model</h3>
             <p class="muted">围绕 <em>Acinetobacter baumannii</em> 设计了多尺度解释框架，覆盖 replicon-level、fixed-window、dynamic-window 与 embedding 分析，用于研究物种层面的 genomic regularity 与异常区域。</p>
@@ -292,14 +300,13 @@
               <a href="#">海报 / Slides</a>
               <a href="#">技术报告</a>
               <a href="#">GitHub / 代码</a>
-              <a href="#">图表展示</a>
             </div>
             <div class="mini-tags">
               <span>Genomics</span><span>Perplexity</span><span>Embeddings</span><span>HPC</span><span>Interpretability</span>
             </div>
           </article>
 
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <p class="kicker">Healthcare · Clinical AI · Parexel</p>
             <h3>Patient Recruitment Agent (PRA)</h3>
             <p class="muted">参与 AI 辅助临床患者招募工作流，重点关注 eligibility logic、evidence extraction 与下游存储设计如何适配真实监管和业务约束。</p>
@@ -320,7 +327,7 @@
             </div>
           </article>
 
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <p class="kicker">Healthcare · Medical Education · Agent Systems</p>
             <h3>SimuPatient</h3>
             <p class="muted">将一个 LLM 标准化病人原型进一步重构成更适合研究的教育型 agent system，加强了 reproducibility、persona consistency 与结构化评估。</p>
@@ -340,7 +347,7 @@
             </div>
           </article>
 
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <p class="kicker">Public Health · Evidence Agent · Drug Repurposing</p>
             <h3>OrphanCure</h3>
             <p class="muted">构建了一个可验证的生物医学 agent 原型，用于罕见病药物重定位，串联 entity resolution、target retrieval、文献检索、分阶段推理与 post-hoc evidence checking。</p>
@@ -366,7 +373,7 @@
 
     <section id="experience">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title reveal">
           <div>
             <p class="kicker">Experience</p>
             <h2>研究与行业经历时间线</h2>
@@ -374,7 +381,7 @@
           <p>保留优秀在线简历的清晰结构，同时为每段经历加入成果与证据入口。</p>
         </div>
         <div class="timeline">
-          <article class="card timeline-card">
+          <article class="card timeline-card reveal">
             <p class="kicker">Scientific Data Team, APAC</p>
             <h3>Parexel — Data Science Intern</h3>
             <div class="timeline-meta"><span>Healthcare AI / CRO</span><span>Singapore</span><span>此处可补日期</span></div>
@@ -386,7 +393,7 @@
             </div>
           </article>
 
-          <article class="card timeline-card">
+          <article class="card timeline-card reveal">
             <p class="kicker">Roleplay Chatbot · Internal Literature Agent</p>
             <h3>UMU — AI Product / AI Agent Intern</h3>
             <div class="timeline-meta"><span>Applied LLM Systems</span><span>此处可补地点</span><span>此处可补日期</span></div>
@@ -398,10 +405,10 @@
             </div>
           </article>
 
-          <article class="card timeline-card">
+          <article class="card timeline-card reveal">
             <p class="kicker">Model Governance · Synthetic Tabular Data</p>
             <h3>SAS — Data Analysis Intern</h3>
-            <div class="timeline-meta"><span>Enterprise AI / Analytics</span><span>此处可补地点</span><span>此处可补日期</span></div>
+            <div class="timeline-meta"><span>Enterprise AI / Analytics</span><span>Shanghai, China</span><span>2024年1月 - 2024年3月</span></div>
             <p class="muted">参与银行场景下的模型风险评分逻辑分析，并研究 synthetic tabular data generation 作为企业分析能力的可能性。</p>
             <div class="evidence-links">
               <a href="#">总结 Slides</a>
@@ -409,7 +416,7 @@
             </div>
           </article>
 
-          <article class="card timeline-card">
+          <article class="card timeline-card reveal">
             <p class="kicker">Customer Growth Analytics</p>
             <h3>NTU × McKinsey — Data Science Project</h3>
             <div class="timeline-meta"><span>Applied Analytics</span><span>Singapore</span><span>此处可补日期</span></div>
@@ -426,7 +433,7 @@
 
     <section id="outputs">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title reveal">
           <div>
             <p class="kicker">Outputs</p>
             <h2>论文、报告、海报与研究产出</h2>
@@ -434,7 +441,7 @@
           <p>这个模块专门修正很多个人主页的通病：不只列 skill，而是把证据入口做出来。</p>
         </div>
         <div class="pub-grid">
-          <article class="card pub-card">
+          <article class="card pub-card reveal">
             <p class="kicker">Manuscript in preparation</p>
             <h3>Perplexity-Based Interpretation of the Genome of <em>Acinetobacter baumannii</em></h3>
             <p class="muted">围绕 genomic foundation models 的多尺度 perplexity 分析，研究 species-level genomic grammar 与 anomaly-sensitive region。</p>
@@ -442,11 +449,11 @@
               <a href="#">论文草稿</a>
               <a href="#">海报</a>
               <a href="#">Slides</a>
-              <a href="#">Figures</a>
+              <button class="btn-academic" onclick="navigator.clipboard.writeText('@article{lyon2026acinetobacter,\n  title={Perplexity-Based Interpretation of the Genome of Acinetobacter baumannii},\n  author={Lyon, Chelsea},\n  year={2026}\n}'); alert('BibTeX 已复制！');">📋 复制 BibTeX</button>
             </div>
           </article>
 
-          <article class="card pub-card">
+          <article class="card pub-card reveal">
             <p class="kicker">Review article in development</p>
             <h3>Mamba-Based State Space Models for Medical Imaging</h3>
             <p class="muted">关于 Mamba 及相关 state-space architecture 在医学图像分割、检测、重建、配准与生成任务中的综述。</p>
@@ -457,7 +464,7 @@
             </div>
           </article>
 
-          <article class="card pub-card">
+          <article class="card pub-card reveal">
             <p class="kicker">Public health research</p>
             <h3>Bacterial foodborne disease incidence during COVID-19</h3>
             <p class="muted">系统综述与定量分析方向，聚焦疫情期间细菌性食源性疾病发生率变化、影响因素与公共卫生模式。</p>
@@ -468,7 +475,7 @@
             </div>
           </article>
 
-          <article class="card pub-card">
+          <article class="card pub-card reveal">
             <p class="kicker">Reserved section</p>
             <h3>海报、notebooks、可复现报告与 GitHub 产出</h3>
             <p class="muted">这里可放课程研究成果、project reports、reproducible notebooks，以及对学术和求职都很有帮助的 GitHub 项目。</p>
@@ -484,7 +491,7 @@
 
     <section id="contact">
       <div class="container contact-grid">
-        <div class="card contact-card">
+        <div class="card contact-card reveal">
           <p class="kicker">Contact</p>
           <h2>欢迎联系：研究合作、实习与 AI4Science 机会</h2>
           <p>
@@ -495,10 +502,10 @@
             <a class="btn" href="https://github.com/Chelsea-19">查看 GitHub</a>
           </div>
         </div>
-        <div class="card contact-card">
+        <div class="card contact-card reveal">
           <p class="kicker">Quick facts</p>
           <ul class="clean">
-            <li><strong>姓名：</strong> Chelsea Lyon / 梁敬林</li>
+            <li><strong>姓名：</strong> Chelsea (Felix) Lyon / 梁敬林</li>
             <li><strong>所在地：</strong> Singapore</li>
             <li><strong>项目：</strong> NTU Biomedical Data Science (AI) 硕士</li>
             <li><strong>主题：</strong> 聚焦 Bio / Healthcare / Public Health 的 AI4Science 研究者</li>
@@ -510,11 +517,12 @@
   </main>
 
   <div class="container footer">
-    <div>© 2026 Chelsea Lyon. 适用于 GitHub Pages 的中英双语学术 / 求职主页。</div>
+    <div>© 2026 Chelsea (Felix) Lyon. 适用于 GitHub Pages 的中英双语学术 / 求职主页。</div>
   </div>
 
   <script>
     (function () {
+      // 主题切换逻辑
       const root = document.documentElement;
       const button = document.getElementById('themeToggle');
       const saved = localStorage.getItem('chelsea-theme');
@@ -532,6 +540,21 @@
         root.dataset.theme = theme;
         button.textContent = theme === 'dark' ? '☀️ 浅色' : '🌙 深色';
       }
+
+      // 滚动动画逻辑
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 100;
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          }
+        }
+      }
+      window.addEventListener("scroll", reveal);
+      reveal(); // 加载时触发一次
     })();
   </script>
 </body>
