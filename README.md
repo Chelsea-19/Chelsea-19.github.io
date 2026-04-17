@@ -1,4 +1,4 @@
-# Chelsea (Felix) Lyon — AI4Science Personal Homepage
+# Felix Liang Personal Homepage
 
 Bilingual (EN / ZH) academic homepage. Static HTML + CSS + JS, zero build, GitHub Pages ready.
 
