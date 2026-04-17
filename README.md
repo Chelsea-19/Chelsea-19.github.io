@@ -1,37 +1,43 @@
-# Felix Liang Personal Homepage
+# Chelsea (Felix) Lyon — AI4Science Personal Homepage
 
-This repository hosts my GitHub Pages personal website.
+Bilingual (EN / ZH) academic homepage. Static HTML + CSS + JS, zero build, GitHub Pages ready.
 
 ## Structure
 
 ```text
 .
-├── index.html
-├── zh/
-│   └── index.html
-├── assets/
-│   ├── cv/
-│   │   ├── Felix_Liang_CV_EN.pdf
-│   │   └── Felix_Liang_CV_CN.pdf
-│   └── img/
-│       └── your-photo.jpg
-└── README.md
+├── index.html                 # About (EN)
+├── career/index.html          # Education & Experience (EN)
+├── projects/index.html        # Selected Projects (EN)
+├── publications/index.html    # Publications & Outputs (EN)
+├── contact/index.html         # Contact (EN)
+├── zh/                        # 中文版 (mirror structure)
+│   ├── index.html
+│   ├── career/index.html
+│   ├── projects/index.html
+│   ├── publications/index.html
+│   └── contact/index.html
+└── assets/
+    ├── css/style.css          # Design system
+    ├── js/main.js             # Theme toggle, scroll reveal, mobile menu
+    ├── cv/                    # CV PDFs (EN & CN)
+    └── img/                   # Avatar & logos
 ```
 
-## Notes
+## Quick Start
 
-- `index.html` is the English homepage.
-- `zh/index.html` is the Chinese homepage.
-- Replace placeholder links such as `Preprint`, `Poster`, `Slides`, and `LinkedIn`.
-- Put your CV PDFs into `assets/cv/`.
-- Optional: add profile image(s) under `assets/img/`.
+1. Replace the SVG avatar placeholder with your photo (`assets/img/avatar.jpg`)
+2. Put CV files into `assets/cv/`
+3. Update placeholder `#` links with real URLs
+4. Fill in undergraduate education info
+5. Update Google Scholar / LinkedIn links in the sidebar
 
-## GitHub Pages
+## Deploy
 
-For a user site, the repository name should be:
+**GitHub Pages** — push to `main`, enable Pages in Settings → Deploy from branch → `main` / `/ (root)`.
 
-`Chelsea-19.github.io`
+**Local preview** — `npx serve .` then open `http://localhost:3000`.
 
-Once GitHub Pages is enabled, the site URL will be:
+## License
 
-`https://Chelsea-19.github.io`
+© 2026 Chelsea (Felix) Lyon. All rights reserved.
