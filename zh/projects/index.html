@@ -74,33 +74,33 @@
           </article>
 
           <article class="project-card">
-            <p class="project-domain">Healthcare · Clinical AI · Parexel</p>
-            <h3 class="project-title">Patient Recruitment Agent (PRA)</h3>
-            <p class="project-desc">参与 AI 辅助临床患者招募工作流，重点关注 eligibility logic、evidence extraction 与下游存储设计如何适配真实监管和业务约束。</p>
-            <ul class="project-bullets"><li>将临床文本映射为结构化筛选条件与 workflow-ready 表示。</li><li>分析 Agent 设计在 APAC CRO 与 RWD/RWE 场景下的适配方式。</li><li>关注 workflow quality，而不仅仅是 extraction accuracy。</li></ul>
-            <div class="project-impact"><strong>意义：</strong>体现医疗 AI 经验是贴近落地现实的，而不是 toy demo。</div>
-            <div class="evidence-links"><a class="evidence-link" href="#">架构说明</a><a class="evidence-link" href="#">工作流图</a><a class="evidence-link" href="#">案例展示</a><a class="evidence-link" href="#">Demo / notebook</a></div>
-            <div class="mini-tags"><span class="mini-tag">Clinical AI</span><span class="mini-tag">Eligibility Logic</span><span class="mini-tag">RWD/RWE</span><span class="mini-tag">Workflow Design</span></div>
-          </article>
-
-          <article class="project-card">
             <p class="project-domain">Healthcare · Medical Education · Agent Systems</p>
             <h3 class="project-title">SimuPatient</h3>
-            <p class="project-desc">将一个 LLM 标准化病人原型重构为更适合研究的教育型 Agent System，加强了 reproducibility、persona consistency 与结构化评估。</p>
-            <ul class="project-bullets"><li>从 case generation 到 consultation、logging、scoring 重新整理系统流程。</li><li>引入 hidden-case logic 与更严格的评估设计。</li><li>提升了从 prototype 到 research artifact 的路径清晰度。</li></ul>
-            <div class="project-impact"><strong>意义：</strong>体现医疗教育 AI 中的评估意识与研究方法思维。</div>
-            <div class="evidence-links"><a class="evidence-link" href="#">系统概览</a><a class="evidence-link" href="#">评估方案</a><a class="evidence-link" href="#">截图 / Demo</a></div>
-            <div class="mini-tags"><span class="mini-tag">Medical Education</span><span class="mini-tag">LLM Agents</span><span class="mini-tag">Evaluation</span><span class="mini-tag">Reproducibility</span></div>
+            <p class="project-desc">一个由 LLM 驱动的数字病人模拟平台，服务于医学教育，帮助医学生通过与 AI 病人进行问诊练习，提升临床沟通与诊断能力。</p>
+            <ul class="project-bullets"><li>包含 AI 病人生成模块，可构建多样化、病例驱动的虚拟患者。</li><li>支持用户与 AI 病人的对话模拟，复现医学问诊场景。</li><li>提供 OSCE 风格评估结果，给出结构化训练反馈。</li></ul>
+            <div class="project-impact"><strong>意义：</strong>以低成本、可重复的方式补充传统教学中的临床问诊训练。</div>
+            <div class="evidence-links"><a class="evidence-link" href="https://simupatient.streamlit.app/" target="_blank" rel="noopener">在线演示</a></div>
+            <div class="mini-tags"><span class="mini-tag">Medical Education</span><span class="mini-tag">LLM Simulation</span><span class="mini-tag">Clinical Interview</span><span class="mini-tag">OSCE</span></div>
           </article>
 
           <article class="project-card">
             <p class="project-domain">Public Health · Evidence Agent · Drug Repurposing</p>
-            <h3 class="project-title">OrphanCure</h3>
-            <p class="project-desc">构建了一个可验证的生物医学 Agent 原型，用于罕见病药物重定位，串联 entity resolution、target retrieval、文献检索、分阶段推理与 post-hoc evidence checking。</p>
-            <ul class="project-bullets"><li>将 Agent 设计为带有明确状态和 human-in-the-loop 控制的流程。</li><li>集成 OpenTargets、PubMed 等检索工具。</li><li>通过 schema-constrained outputs 与 verification 降低 hallucination 风险。</li></ul>
-            <div class="project-impact"><strong>意义：</strong>体现公共卫生与转化医学推理中的可审计证据链。</div>
-            <div class="evidence-links"><a class="evidence-link" href="#">GitHub repo</a><a class="evidence-link" href="#">Agent workflow</a><a class="evidence-link" href="#">样例报告</a><a class="evidence-link" href="#">Benchmark notes</a></div>
-            <div class="mini-tags"><span class="mini-tag">Drug Repurposing</span><span class="mini-tag">Evidence Retrieval</span><span class="mini-tag">Verification</span><span class="mini-tag">Biomedical NLP</span></div>
+            <h3 class="project-title">OrphanCure-AI</h3>
+            <p class="project-desc">一个帮助研究人员评估现有药物是否可用于目标疾病的多智能体系统，可针对特定“药物-疾病”组合进行自动化假设评估与证据挖掘。</p>
+            <ul class="project-bullets"><li>通过 OpenTargets 实体解析，识别药物靶点与疾病相关靶点的交集。</li><li>利用 PubMed 进行文献检索与排序，优先定位高价值证据。</li><li>自动判断并分类文献证据，形成结构化、可审计的评估结果。</li></ul>
+            <div class="project-impact"><strong>意义：</strong>减少药物重定位前期人工筛选负担，加快可验证假设生成。</div>
+            <div class="evidence-links"><a class="evidence-link" href="https://orphancure-ai.streamlit.app/" target="_blank" rel="noopener">在线演示</a></div>
+            <div class="mini-tags"><span class="mini-tag">Drug Repurposing</span><span class="mini-tag">Multi-Agent</span><span class="mini-tag">OpenTargets</span><span class="mini-tag">PubMed</span></div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-domain">Chronic Care · China Healthcare · Clinical Workflow</p>
+            <h3 class="project-title">CarePilot CN</h3>
+            <p class="project-desc">面向中国大陆 2 型糖尿病合并高血压患者的慢病智能管理平台，提供长期健康管理与连续随访支持。</p>
+            <ul class="project-bullets"><li>集成患者健康咨询与饮食风险分析模块。</li><li>支持用药管理与提醒，并可执行自动化临床工作流。</li><li>提供医疗摘要生成与报告导出，便于持续管理与协作。</li></ul>
+            <div class="project-impact"><strong>意义：</strong>展示了本土化慢病管理场景中患者服务与临床运营的一体化能力。</div>
+            <div class="evidence-links"><a class="evidence-link" href="https://chronicagent1.streamlit.app/" target="_blank" rel="noopener">在线演示</a></div>
+            <div class="mini-tags"><span class="mini-tag">Chronic Disease</span><span class="mini-tag">T2DM</span><span class="mini-tag">Hypertension</span><span class="mini-tag">Care Management</span></div>
           </article>
 
         </div>
