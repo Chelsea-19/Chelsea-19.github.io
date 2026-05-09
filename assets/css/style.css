@@ -38,6 +38,21 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
+:root[data-theme="dark"] .nav-brand-mark {
+  background: linear-gradient(140deg, var(--primary-strong), #f4cf6a);
+  color: #071225;
+}
+
+:root[data-theme="dark"] .contact-btn.primary,
+:root[data-theme="dark"] .cv-button {
+  background: linear-gradient(145deg, var(--primary-strong), #2d6ecf 60%, #f4cf6a);
+  color: #f8fbff;
+}
+
+:root[data-theme="dark"] .section-heading::after {
+  background: linear-gradient(90deg, var(--primary), #f4cf6a);
+}
+
 .top-nav {
   position: sticky;
   top: 0;
