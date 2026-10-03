@@ -1,43 +1,29 @@
-# Felix Liang Personal Homepage
+# Jinglin (Felix) Liang — AI Agent / AI4Science
 
-Bilingual (EN / ZH) academic homepage. Static HTML + CSS + JS, zero build, GitHub Pages ready.
+A bilingual academic and professional homepage focused on AI agents, genomic foundation models, and biomedical evidence. Plain HTML, CSS, and JavaScript; no build step or runtime dependencies.
 
-## Structure
+## Preview and checks
 
-```text
-.
-├── index.html                 # About (EN)
-├── career/index.html          # Education & Experience (EN)
-├── projects/index.html        # Selected Projects (EN)
-├── publications/index.html    # Publications & Outputs (EN)
-├── contact/index.html         # Contact (EN)
-├── zh/                        # 中文版 (mirror structure)
-│   ├── index.html
-│   ├── career/index.html
-│   ├── projects/index.html
-│   ├── publications/index.html
-│   └── contact/index.html
-└── assets/
-    ├── css/style.css          # Design system
-    ├── js/main.js             # Theme toggle, scroll reveal, mobile menu
-    ├── cv/                    # CV PDFs (EN & CN)
-    └── img/                   # Avatar & logos
+```sh
+python3 -m http.server 4173
+python3 scripts/check_site.py
+node --check assets/js/main.js
 ```
 
-## Quick Start
+Open `http://localhost:4173`. GitHub Pages serves the repository root from `main`.
 
-1. Replace the SVG avatar placeholder with your photo (`assets/img/avatar.jpg`)
-2. Put CV files into `assets/cv/`
-3. Update placeholder `#` links with real URLs
-4. Fill in undergraduate education info
-5. Update Google Scholar / LinkedIn links in the sidebar
+## Content
 
-## Deploy
+The English homepage is `index.html`; its Chinese counterpart is `zh/index.html`. Both languages have `career/`, `projects/`, `publications/`, and `contact/` routes. Styles and interactions live in `assets/css/style.css` and `assets/js/main.js`.
 
-**GitHub Pages** — push to `main`, enable Pages in Settings → Deploy from branch → `main` / `/ (root)`.
+Keep both languages in sync when updating education, roles, project scope, and manuscript status. The project anchors `evo2`, `simupatient`, `orphancure`, and `carepilot` are linked from the homepages. Add evidence links only when their destinations are available.
 
-**Local preview** — `npx serve .` then open `http://localhost:3000`.
+The existing CV PDFs are placeholders. The interface currently offers **Request CV / 索取简历** by email. Replace both PDFs with real CVs before restoring download links. The original portrait is retained in `assets/img/avatar.jpg`. Email addresses remain in contact actions without being printed in page text.
 
-## License
+## Design and review
 
-© 2026 Chelsea (Felix) Lyon. All rights reserved.
+The site uses a warm paper background, ink text, a restrained blue accent, serif display headings, and system text fonts. It has light/dark themes, mobile navigation, visible keyboard focus, and matching language routes. Fonts and icons require no external service.
+
+See [docs/review.md](docs/review.md) for reference sources, review findings, fixes, and validation.
+
+© 2026 Jinglin (Felix) Liang. All rights reserved.
